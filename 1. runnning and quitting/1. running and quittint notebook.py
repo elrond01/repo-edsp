@@ -17,7 +17,16 @@ print(first_name, 'is', age, 'years old')
 
 age = age + 3
 print(age)
+      
 
 # COMMAND ----------
 
+print(first_name[0]+first_name[1:4])
 
+# COMMAND ----------
+
+species_name = "Acacia buxifolia"
+
+# COMMAND ----------
+
+species_name[2:8]
