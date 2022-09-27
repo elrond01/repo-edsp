@@ -30,3 +30,24 @@ species_name = "Acacia buxifolia"
 # COMMAND ----------
 
 species_name[2:8]
+
+# COMMAND ----------
+
+print(type(52))
+
+# COMMAND ----------
+
+separator = '=' * 10
+print(separator)
+
+# COMMAND ----------
+
+print(1 + int('2'))
+result = 3.25 + 4
+print(result, 'is', type(result))
+
+# COMMAND ----------
+
+print('5 // 3:', 5 // 3)
+print('5 / 3:', 5 / 3)
+print('5 % 3:', 5 % 3)
