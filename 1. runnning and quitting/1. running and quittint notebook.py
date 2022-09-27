@@ -51,3 +51,11 @@ print(result, 'is', type(result))
 print('5 // 3:', 5 // 3)
 print('5 / 3:', 5 / 3)
 print('5 % 3:', 5 % 3)
+
+# COMMAND ----------
+
+print("fractional string to int:", int("3.4"))
+
+# COMMAND ----------
+
+help(round)
