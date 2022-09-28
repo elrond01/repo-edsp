@@ -61,11 +61,7 @@ configs = {"fs.azure.account.auth.type": "OAuth",
 
 # Mounting ADLS Storage to DBFS
 # Mount only if the directory is not already mounted
-if not any(mount.mountPoint == mountPoint for mount in dbutils.fs.mounts()):
-  dbutils.fs.mount(
-    source = source,
-    mount_point = mountPoint,
-    extra_configs = configs)
+if not any(mount.mountPoint == mountPoint for mount in dbutils.fs.mounts()):  dbutils.fs.mount(source = source, mount_point = mountPoint, extra_configs = configs)
 
 # COMMAND ----------
 
@@ -73,4 +69,5 @@ dbutils.fs.mounts()
 
 # COMMAND ----------
 
-
+# MAGIC %fs
+# MAGIC ls "mnt/data"
