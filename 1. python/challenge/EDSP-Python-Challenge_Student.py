@@ -225,7 +225,7 @@ data
 
 # COMMAND ----------
 
-
+data.iloc[[0,2,4,7]]
 
 # COMMAND ----------
 
@@ -238,4 +238,11 @@ data
 
 # COMMAND ----------
 
+import matplotlib.pyplot as plt
 
+x = [ 1, 8]
+y = [3, 10]
+
+plt.plot(x, y)
+plt.xlabel('x')
+plt.ylabel('x')
