@@ -53,7 +53,7 @@ EDSP
 
 # COMMAND ----------
 
-___ math
+import math
 
 print(math.pi)
 
@@ -68,7 +68,7 @@ distance=15
 
 velocity=5
 
-print(distance _?_ velocity)
+print(distance / velocity)
 
 # COMMAND ----------
 
@@ -79,7 +79,7 @@ print(distance _?_ velocity)
 
 import numpy as np
 m = np.array([6, 2, 4])
-n = ?
+n = np.array([2,2,2])
 print(m + n)
 
 # COMMAND ----------
@@ -90,7 +90,7 @@ print(m + n)
 # COMMAND ----------
 
 i = 1
-while i < 5 ?
+while i < 5 :
   print(i)
   i += 1
 
@@ -105,12 +105,12 @@ while i < 5 ?
 
 # COMMAND ----------
 
-values = ____
-values.____(1)
-values.____(3)
-values.____(5)
+values = []
+values.append(1)
+values.append(3)
+values.append(5)
 print('first time:', values)
-values = values[____]
+values = values[1:]
 print('second time:', values)
 
 
@@ -121,16 +121,8 @@ print('second time:', values)
 
 # COMMAND ----------
 
-import random
-for i in range(10):
-
-    # simulating the mass of a chicken egg
-    # the (random) mass will be 70 +/- 20 grams
-    mass = 70 + 20.0 * (2.0 * random.random() - 1.0)
-
-    print(mass)
-   
-    # egg sizing machinery prints a label
+def categorice (mass):
+# egg sizing machinery prints a label
     if mass >= 85:
        print("jumbo")
     elif mass >= 70:
@@ -139,6 +131,18 @@ for i in range(10):
        print("medium")
     else:
        print("small")
+    
+
+import random
+for i in range(10):
+
+    # simulating the mass of a chicken egg
+    # the (random) mass will be 70 +/- 20 grams
+    mass = 70 + 20.0 * (2.0 * random.random() - 1.0)
+
+    print(mass)
+    categorice(mass)
+
 
 # COMMAND ----------
 
