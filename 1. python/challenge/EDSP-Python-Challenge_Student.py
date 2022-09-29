@@ -121,6 +121,26 @@ print('second time:', values)
 
 # COMMAND ----------
 
+import random
+for i in range(10):
+
+    # simulating the mass of a chicken egg
+    # the (random) mass will be 70 +/- 20 grams
+    mass = 70 + 20.0 * (2.0 * random.random() - 1.0)
+
+    print(mass)
+    if mass >= 85:
+       print("jumbo")
+    elif mass >= 70:
+       print("large")
+    elif mass < 70 and mass >= 55:
+       print("medium")
+    else:
+       print("small")
+
+
+# COMMAND ----------
+
 def categorice (mass):
 # egg sizing machinery prints a label
     if mass >= 85:
@@ -131,7 +151,6 @@ def categorice (mass):
        print("medium")
     else:
        print("small")
-    
 
 import random
 for i in range(10):
@@ -142,14 +161,6 @@ for i in range(10):
 
     print(mass)
     categorice(mass)
-
-
-# COMMAND ----------
-
-# MAGIC %md
-# MAGIC Solution
-
-# COMMAND ----------
 
 
 
@@ -177,11 +188,11 @@ data = pd.DataFrame({'Brand' : ['Maruti', 'Hyundai', 'Tata',
                                'Mumbai','Chennai',  'Ghaziabad'],
                      'Mileage' :  [28, 27, 25, 26, 28, 
                                    29, 24, 21, 24]})
+print(data)
 
 # COMMAND ----------
 
-# MAGIC %md
-# MAGIC Solution
+data.loc[(data['Brand']=='Maruti') & (data['Mileage']>25)]
 
 # COMMAND ----------
 
@@ -194,7 +205,7 @@ data = pd.DataFrame({'Brand' : ['Maruti', 'Hyundai', 'Tata',
 
 # COMMAND ----------
 
-
+data.iloc[2:6]
 
 # COMMAND ----------
 
@@ -203,7 +214,9 @@ data = pd.DataFrame({'Brand' : ['Maruti', 'Hyundai', 'Tata',
 
 # COMMAND ----------
 
-
+updated = data['Year'] < 2015
+data.loc[updated,'Mileage']= 22
+data
 
 # COMMAND ----------
 
